@@ -14,4 +14,5 @@ struct pmos {
 typedef struct pmos_old pmos_old_t;
 typedef struct pmos pmos_t;
 
+void pmos_update_old(pmos_old_t*);
 void pmos_update(pmos_t*);

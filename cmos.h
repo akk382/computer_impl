@@ -9,4 +9,5 @@ struct cmos {
 
 typedef struct cmos cmos_t;
 
+void cmos_update_old(cmos_t*);
 void cmos_update(cmos_t*);

@@ -5,6 +5,7 @@ void nmos_update_old(nmos_old_t* sw) {
   else sw->output->val = LOW;
 }
 
+// We had to define this because, the source can be FLOATING when connected in series.
 void nmos_update(nmos_t* sw) {
   if (sw->source->val == LOW) {
     if (sw->gate->val == HIGH) {
