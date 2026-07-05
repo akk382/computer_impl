@@ -23,7 +23,6 @@ N4 = NAND(N2, N3)
 #include "wire.h"
 
 void xor_update(xor_t* xr) {
-
   nand_t nd1, nd2, nd3, nd4;
   wire_t n1_out, n2_out, n3_out;
 
@@ -49,8 +48,6 @@ void xor_update(xor_t* xr) {
   nand_update(&nd3);
   nand_update(&nd4);
 }
-
-
 
 /*
 N1 is:
