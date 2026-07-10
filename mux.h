@@ -1,5 +1,5 @@
-#ifndef ONE_BIT_MULTIPLEXER_H
-#define ONE_BIT_MULTIPLEXER_H
+#ifndef MUX_H
+#define MUX_H
 
 #include "wire.h"
 

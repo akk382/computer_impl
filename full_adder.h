@@ -1,3 +1,6 @@
+#ifndef FULL_ADDER_H
+#define FULL_ADDER_H
+
 #include "wire.h"
 
 struct full_adder {
@@ -12,3 +15,4 @@ typedef struct full_adder full_adder;
 
 void fa_update(full_adder*);
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef PMOS_NET_H
+#define PMOS_NET_H
+
 #include "pmos.h"
 
 struct pmos_net {
@@ -12,3 +15,5 @@ typedef struct pmos_net pmos_net;
 //  Rest of the below are connected to the drain in series.
 void pmos_series_update(pmos_net*);
 void pmos_parallel_update(pmos_net*);
+
+#endif

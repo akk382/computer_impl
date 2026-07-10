@@ -1,3 +1,6 @@
+#ifndef FOUR_BIT_SUB_H
+#define FOUR_BIT_SUB_H
+
 #include "bit_sets.h"
 
 struct four_bit_sub {
@@ -9,3 +12,5 @@ struct four_bit_sub {
 typedef struct four_bit_sub four_bit_sub;
 
 void fbs_update(four_bit_sub*);
+
+#endif

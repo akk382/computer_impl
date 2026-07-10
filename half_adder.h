@@ -1,3 +1,6 @@
+#ifndef HALF_ADDER_H
+#define HALF_ADDER_H
+
 #include "wire.h"
 
 struct half_adder {
@@ -10,3 +13,5 @@ struct half_adder {
 typedef struct half_adder half_adder;
 
 void ha_update(half_adder*);
+
+#endif

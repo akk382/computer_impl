@@ -1,3 +1,6 @@
+#ifndef FOUR_BIT_ADDER_H
+#define FOUR_BIT_ADDER_H
+
 #include "bit_sets.h"
 
 struct four_bit_adder {
@@ -10,3 +13,5 @@ struct four_bit_adder {
 typedef struct four_bit_adder four_bit_adder;
 
 void fba_update(four_bit_adder*);
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PMOS_H
+#define PMOS_H
+
 #include "wire.h"
 
 struct pmos_old {
@@ -16,3 +19,5 @@ typedef struct pmos pmos_t;
 
 void pmos_update_old(pmos_old_t*);
 void pmos_update(pmos_t*);
+
+#endif

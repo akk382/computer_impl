@@ -1,3 +1,6 @@
+#ifndef TWO_BIT_ADDER_H
+#define TWO_BIT_ADDER_H
+
 #include "bit_sets.h"
 
 struct two_bit_adder {
@@ -10,3 +13,5 @@ struct two_bit_adder {
 typedef struct two_bit_adder two_bit_adder;
 
 void tba_update(two_bit_adder*);
+
+#endif

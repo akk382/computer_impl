@@ -1,3 +1,6 @@
+#ifndef FOUR_BIT_INC_H
+#define FOUR_BIT_INC_H
+
 #include "bit_sets.h"
 
 struct four_bit_inc {
@@ -9,3 +12,5 @@ struct four_bit_inc {
 typedef struct four_bit_inc four_bit_inc;
 
 void fbi_update(four_bit_inc*);
+
+#endif

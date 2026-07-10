@@ -1,3 +1,6 @@
+#ifndef NMOS_NET_H
+#define NMOS_NET_H
+
 #include "nmos.h"
 
 struct nmos_net {
@@ -12,3 +15,5 @@ typedef struct nmos_net nmos_net;
 //  Rest of the above are connected to the drain in series.
 void nmos_series_update(nmos_net*);
 void nmos_parallel_update(nmos_net*);
+
+#endif

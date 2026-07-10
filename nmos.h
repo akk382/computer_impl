@@ -1,3 +1,6 @@
+#ifndef NMOS_H
+#define NMOS_H
+
 #include "wire.h"
 
 struct nmos_old {
@@ -16,3 +19,5 @@ typedef struct nmos nmos_t;
 
 void nmos_update_old(nmos_old_t*);
 void nmos_update(nmos_t*);
+
+#endif
