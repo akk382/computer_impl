@@ -1,5 +1,5 @@
-#ifndef DEMULTIPLEXER_H
-#define DEMULTIPLEXER_H
+#ifndef DEMUX_H
+#define DEMUX_H
 
 #include "wire.h"
 
