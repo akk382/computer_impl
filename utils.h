@@ -5,6 +5,6 @@
 
 typedef char* charp;
 
-const charp signal_to_string(signal_t);
+charp signal_to_string(signal_t);
 
 #endif

@@ -1,6 +1,6 @@
 #include "utils.h"
 
-const charp signal_to_string(signal_t sig) {
+charp signal_to_string(signal_t sig) {
   switch (sig) {
     case LOW: return "LOW";
     case HIGH: return "HIGH";
