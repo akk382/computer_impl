@@ -1,6 +1,8 @@
 /*
- *So a D latch is level-sensitive.
- *Changes Q during the entire HIGH level of D
+ * A D latch is level-sensitive.
+ * Changes Q during the entire HIGH level of D
+ * E = HIGH  → Q follows D
+ * E = LOW   → Q remembers its previous value
  */
 #ifndef D_LATCH_H
 #define D_LATCH_H
