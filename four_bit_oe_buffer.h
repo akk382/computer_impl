@@ -7,7 +7,7 @@
 struct four_bit_oe_buffer {
   nibble Q;
   wire_t* OE;
-  nibble bus;
+  nibble bus; // This is the private bus to this component. Not the actual bus.
 };
 
 typedef struct four_bit_oe_buffer four_bit_oe_buffer_t;

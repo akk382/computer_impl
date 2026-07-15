@@ -1,7 +1,6 @@
 #include "four_bit_bus_conflict_resolver.h"
 #include "bus_conflict_resolver.h"
 
-
 void fbbcr_update(const four_bit_bus_conflict_resolver_t* fbbcr) {
   bus_conflict_resolver_t bcr0, bcr1, bcr2, bcr3;
 
