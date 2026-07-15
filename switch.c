@@ -1,11 +1,22 @@
 #include "switch.h"
 
-inline void switch_update(switch_t* sw) {
-  if (sw->input->val == HIGH) {
-    if (sw->control->val == HIGH) sw->output->val = HIGH;
-    else sw->output->val = FLOATING;
+/* switch
+ * INPUT = HIGH, CONTROL = HIGH -> OUTPUT = HIGH
+ * INPUT = HIGH, CONTROL = LOW -> OUTPUT = FLOATING
+ * INPUT = LOW, CONTROL = HIGH -> OUTPUT = LOW
+ * INPUT = LOW, CONTROL = LOW -> OUTPUT = FLOATING
+ * INPUT = FLOATING, CONTROL = HIGH -> OUTPUT = FLOATING
+ * INPUT = FLOATING, CONTROL = LOW -> OUTPUT = FLOATING
+ *
+ * From the above Truth Table, we can observe that:
+ * when the CONTROL = HIGH, output = input.
+ * Else output = FLOATING.
+ */
+
+void switch_update(const switch_t* sw) {
+  if (sw->control->val == HIGH) {
+    sw->output->val = sw->input->val;
   } else {
-    if (sw->control->val == LOW) sw->output->val = FLOATING;
-    else sw->output->val = LOW;
+    sw->output->val = FLOATING;
   }
 }

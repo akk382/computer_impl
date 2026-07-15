@@ -11,6 +11,6 @@ struct e_switch {
 
 typedef struct e_switch switch_t;
 
-inline void switch_update(switch_t*);
+void switch_update(const switch_t*);
 
 #endif
