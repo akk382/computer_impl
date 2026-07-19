@@ -50,6 +50,8 @@ COMMON_SRC = \
 	src/bus/two_register_bus.c \
 	src/machine/two_register_machine.c
 
+all: two_register_machine_test
+
 two_register_machine_test:
 	$(CC) $(CFLAGS) tests/two_register_machine_test.c $(COMMON_SRC) -o $(BIN_DIR)/two_register_machine_test.exe
 
@@ -67,3 +69,5 @@ four_bit_reg_test:
 
 clean:
 	del /Q build\bin\*.exe
+
+.PHONY: all clean two_register_machine_test two_register_bus_test four_bit_bus_conflict_resolver_test four_bit_oe_buffer_test four_bit_reg_test
