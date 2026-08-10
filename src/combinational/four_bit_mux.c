@@ -1,7 +1,7 @@
 #include "../../include/combinational/four_bit_mux.h"
 #include "../../include/combinational/mux.h"
 
-void fbm_update(four_bit_mux* fbm) {
+void fbm_update(const four_bit_mux* fbm) {
   mux_t obm0, obm1, obm2, obm3;
 
   obm0.in0 = fbm->in0.bit0;

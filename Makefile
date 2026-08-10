@@ -48,26 +48,31 @@ COMMON_SRC = \
 	src/bus/bus_conflict_resolver.c \
 	src/bus/four_bit_bus_conflict_resolver.c \
 	src/bus/two_register_bus.c \
-	src/machine/two_register_machine.c
+	src/machine/two_register_machine.c \
+	src/timing/clock.c \
+	src/timing/four_bit_counter.c \
 
-all: two_register_machine_test
+all: four_bit_counter_test
 
 two_register_machine_test:
-	$(CC) $(CFLAGS) tests/two_register_machine_test.c $(COMMON_SRC) -o $(BIN_DIR)/two_register_machine_test.exe
+	$(CC) $(CFLAGS) tests/two_register_machine_test.c $(COMMON_SRC) -o $(BIN_DIR)/two_register_machine_test
 
 two_register_bus_test:
-	$(CC) $(CFLAGS) tests/two_register_bus_test.c $(COMMON_SRC) -o $(BIN_DIR)/two_register_bus_test.exe
+	$(CC) $(CFLAGS) tests/two_register_bus_test.c $(COMMON_SRC) -o $(BIN_DIR)/two_register_bus_test
 
 four_bit_bus_conflict_resolver_test:
-	$(CC) $(CFLAGS) tests/four_bit_bus_conflict_resolver_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_bus_conflict_resolver_test.exe
+	$(CC) $(CFLAGS) tests/four_bit_bus_conflict_resolver_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_bus_conflict_resolver_test
 
 four_bit_oe_buffer_test:
-	$(CC) $(CFLAGS) tests/four_bit_oe_buffer_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_oe_buffer_test.exe
+	$(CC) $(CFLAGS) tests/four_bit_oe_buffer_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_oe_buffer_test
 
 four_bit_reg_test:
-	$(CC) $(CFLAGS) tests/four_bit_reg_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_reg_test.exe
+	$(CC) $(CFLAGS) tests/four_bit_reg_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_reg_test
+
+four_bit_counter_test:
+	$(CC) $(CFLAGS) tests/timing/four_bit_counter_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_counter_test
 
 clean:
-	del /Q build\bin\*.exe
+	rm -r build/bin/*
 
 .PHONY: all clean two_register_machine_test two_register_bus_test four_bit_bus_conflict_resolver_test four_bit_oe_buffer_test four_bit_reg_test

@@ -15,6 +15,6 @@ struct four_bit_mux {
 
 typedef struct four_bit_mux four_bit_mux;
 
-void fmb_update(four_bit_mux*);
+void fbm_update(const four_bit_mux*);
 
 #endif

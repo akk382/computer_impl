@@ -1,0 +1,4 @@
+#ifndef FOUR_BIT_TIMER_H
+#define FOUR_BIT_TIMER_H
+
+#endif //FOUR_BIT_TIMER_H
