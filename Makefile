@@ -29,6 +29,7 @@ COMMON_SRC = \
 	src/combinational/four_bit_inc.c \
 	src/combinational/four_bit_not.c \
 	src/combinational/four_bit_and.c \
+	src/combinational/four_bit_or.c \
 	src/combinational/four_bit_xor.c \
 	src/combinational/comparator.c \
 	src/combinational/four_bit_mux.c \
@@ -54,8 +55,9 @@ COMMON_SRC = \
 	src/timing/four_bit_timer.c \
 	src/bus/three_driver_bus_resolver.c \
 	src/bus/three_source_bus.c \
+	src/combinational/four_bit_alu.c \
 
-all: three_source_bus_test
+all: four_bit_alu_test
 
 two_register_machine_test:
 	$(CC) $(CFLAGS) tests/two_register_machine_test.c $(COMMON_SRC) -o $(BIN_DIR)/two_register_machine_test
@@ -83,6 +85,9 @@ three_driver_bus_resolver_test:
 
 three_source_bus_test:
 	$(CC) $(CFLAGS) tests/bus/three_source_bus_test.c $(COMMON_SRC) -o $(BIN_DIR)/three_source_bus_test
+
+four_bit_alu_test:
+	$(CC) $(CFLAGS) tests/combinational/four_bit_alu_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_alu_test
 
 clean:
 	rm -r build/bin/*

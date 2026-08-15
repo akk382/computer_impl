@@ -13,7 +13,6 @@ struct four_bit_and {
 
 typedef struct four_bit_and four_bit_and;
 
-// TODO: not defined
-void fband_update(four_bit_and*);
+void four_bit_and_update(const four_bit_and*);
 
 #endif
