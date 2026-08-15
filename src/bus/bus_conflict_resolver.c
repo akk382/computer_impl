@@ -17,13 +17,17 @@ void bcr_update(const bus_conflict_resolver_t* bcr) {
     } else {
       bcr->bus->val = CONFLICT;
     }
-  } else {
+  } else if (bcr->driver0->val == FLOATING) {
     if (bcr->driver1->val == HIGH) {
       bcr->bus->val = HIGH;
     } else if (bcr->driver1->val == LOW) {
       bcr->bus->val = LOW;
-    } else {
+    } else if (bcr->driver1->val == FLOATING) {
       bcr->bus->val = FLOATING;
+    } else {
+      bcr->bus->val = CONFLICT;
     }
+  } else { // when bcr->driver0.val == CONFLICT
+    bcr->bus->val = CONFLICT;
   }
 }

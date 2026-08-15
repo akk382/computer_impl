@@ -52,8 +52,9 @@ COMMON_SRC = \
 	src/timing/clock.c \
 	src/timing/four_bit_counter.c \
 	src/timing/four_bit_timer.c \
+	src/bus/three_driver_bus_resolver.c \
 
-all: four_bit_timer_test
+all: three_driver_bus_resolver_test
 
 two_register_machine_test:
 	$(CC) $(CFLAGS) tests/two_register_machine_test.c $(COMMON_SRC) -o $(BIN_DIR)/two_register_machine_test
@@ -76,7 +77,10 @@ four_bit_counter_test:
 four_bit_timer_test:
 	$(CC) $(CFLAGS) tests/timing/four_bit_timer_test.c $(COMMON_SRC) -o $(BIN_DIR)/four_bit_timer_test
 
+three_driver_bus_resolver_test:
+	$(CC) $(CFLAGS) tests/bus/three_driver_bus_resolver_test.c $(COMMON_SRC) -o $(BIN_DIR)/three_driver_bus_resolver_test
+
 clean:
 	rm -r build/bin/*
 
-.PHONY: all clean two_register_machine_test two_register_bus_test four_bit_bus_conflict_resolver_test four_bit_oe_buffer_test four_bit_reg_test four_bit_counter_test four_bit_timer_test
+.PHONY: all clean two_register_machine_test two_register_bus_test four_bit_bus_conflict_resolver_test four_bit_oe_buffer_test four_bit_reg_test four_bit_counter_test four_bit_timer_test three_driver_bus_resolver_test
